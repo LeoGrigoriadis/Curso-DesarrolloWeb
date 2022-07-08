@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta  charset="utf-8"/>
+        <title>Inscripción</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <section class="flex">
+            <h1>Inscripción</h1>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre">
+                <br>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido">
+                <br>
+
+                <label for="pais">País:</label>
+                <select type="text" id="pais">
+                    <option value="">-Seleccionar-</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="uruguay">Uruguay</option>
+                    <option value="chile">Chile</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="paraguay">Paraguay</option>
+                </select>
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <br>
+
+                <p>¿Actualmente tiene empleo?:</p>
+                <input type="radio" name="trabajo" id="si" value="si">
+                <label for="si">Si</label>
+                <input type="radio" name="trabajo" id="no" value="no" checked>
+                <label for="no">No</label>
+                <br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </body>
+</html>

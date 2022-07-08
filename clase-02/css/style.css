@@ -1,0 +1,31 @@
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 300px;
+}
+
+form label{
+    display: block;
+    margin: 5px 0px 2px 0px;
+}
+
+form input[type=text], form input[type=email]{
+    width: 100%;
+}
+
+form label[for=si], form label[for=no]{
+    display: inline;
+}
+
+form p{
+    margin-bottom: 2px;
+}
+
+form button{
+    margin: 10px 0px;
+}
