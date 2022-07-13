@@ -12,6 +12,10 @@
     background-color: brown;
 }
 section{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-evenly;
     background-color: cadetblue;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -24,7 +28,7 @@ h1{
     width: calc(100vw - 200px);
     color: white;
     text-align: center;
-    height: 169px;
+    height: calc( 200px - 33px);
 }
 ul{
     margin: 10px;
