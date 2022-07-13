@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace; 
+    background-image: url(../images/fondo.webp);
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position-x: 50%;
+    background-position-y: -50px;
+}
+
+nav{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: rgb(20, 122, 218);   
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 10px 20px;  
+    font-size: 1.2em;  
+}
+
+nav ul a li{
+    color: white;
+    text-decoration: none;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100vh;
+    padding: 20vh 5vw;
+    width: 170px;
+    background: rgb(13, 90, 161);
+    color: white;   
+    text-align: center;
+}
+
+section p{
+    margin: 35px 0 15px 0;
+}
+
+section a{
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(9, 54, 95); 
+    padding: 10px 20px;
+}
+
+section a:hover, nav ul li:hover{
+    background: rgb(84, 84, 235); 
+    cursor: pointer;
+}
