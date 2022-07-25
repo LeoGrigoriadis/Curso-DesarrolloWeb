@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cuadrado{
+    width: 400px;
+    height: 400px;
+    background-color: #3AB4F2;
+}

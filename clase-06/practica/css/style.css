@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    width: 100vw;
+  }
+  
+  form {
+    background-color: #2e2e2e;
+    width: 50%;
+    padding: 10px 40px;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    color: #b1b1b1;
+    border: 1px solid #000;
+    background-color: #252525;
+    margin: 20px 0px;
+    padding: 12px 6px;
+    display: block;
+    width: 100%;
+  }
+  
+  input::placeholder,
+  textarea::placeholder,
+  h3,
+  label,
+  a {
+    color: #b1b1b1;
+  }
+  
+  #check {
+    margin: 0;
+    display: inline;
+    width: 20px;
+  }
+  
