@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+}
+.content{
+    padding: 40px 45px;
+    display: grid;
+    grid-gap: 45px;
+    grid-template-areas: "logo title title"
+                         "section section section";
+}
+.section{
+    grid-area: section;
+    display: grid;
+    grid-gap: 45px;
+    width: calc(100% - 135px);
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.logo{
+    grid-area: logo;
+    height: 80px;
+    background-color: rgb(231, 109, 61);
+}
+.title{
+    height: 80px;
+    grid-area: title;
+    background-color: rgb(7, 129, 109);
+}
+.element{
+    display: grid;
+    grid-template-rows: 200px 50px 30px;
+    grid-gap: 25px;
+}
+.image, .description{
+    background-color: rgb(209, 200, 200);
+}
+.element-header{
+    background-color: rgb(240, 202, 32);
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1279px){
+    .content{
+        grid-template-areas: "logo title title title title"
+                         "section section section section section";
+    }
+    .section{
+        grid-template-columns: 33% 33% 33%;
+        width: calc(100% - 82px);
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px){
+    .content{
+        grid-template-areas: "logo title title title title"
+                         "section section section section section";
+    }
+    .section{
+        grid-template-columns: 50% 50%;
+        width: calc(100% - 45px);
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .content{
+        grid-template-areas: "title title title title title"
+                         "section section section section section";
+    }
+    .section{
+        grid-template-columns: 100%;
+        width: 100%;
+    }
+    .logo{
+        display: none;
+    }
+}
