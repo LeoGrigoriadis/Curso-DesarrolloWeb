@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+:root{
+    --principal: rgb(120,204,109);
+    --sec: rgb(43, 43, 43);
+    --letra: rgb(196, 196, 196);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background: linear-gradient(150deg, rgb(82,165,159), rgb(117,201,112));
+}
+.content{
+    height: calc(100% - 60px);
+    padding: 30px 45px;
+    display: grid;
+    grid-template-columns: 80px 550px calc(100% - 630px);
+    align-items: center;
+}
+.nav{
+    z-index: 1;
+    height: 95%;
+}
+.profile{
+    font-weight: 600;
+    background-color: white;
+    position: relative;
+    left: 10px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: -20px -20px rgb(103,186,132), 10px 0px 20px rgba(95, 95, 95, 0.062);
+}
+.info{
+    background-color: white;
+    height: 95%;
+    overflow: auto;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.btn-nav{
+    height: 80px;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.links{
+    background-color: white;
+    border-radius: 5px;
+}
+.link{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+.links .border-b{
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, white 0%, var(--letra) 100%) 1;
+}

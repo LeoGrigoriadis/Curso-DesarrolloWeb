@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.float-left{
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    padding-left: 40px;
+}
+.float-left > div{
+    margin: 15px 40px;
+    font-size: 12px;
+}
+.socials{
+    padding-right: 70px;
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+}
+.socials > i{
+    margin: 15px 10px;
+    font-size: 12px;
+}
