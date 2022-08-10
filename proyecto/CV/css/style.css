@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 :root{
     --principal: rgb(120,204,109);
-    --sec: rgb(43, 43, 43);
-    --letra: rgb(196, 196, 196);
+    --sec: rgb(50,50,50);
+    --border: rgb(196, 196, 196);
+    --letra: rgb(127,127,127);
 }
 *{
     margin: 0;
@@ -27,7 +28,6 @@ body{
     height: 95%;
 }
 .profile{
-    font-weight: 600;
     background-color: white;
     position: relative;
     left: 10px;
@@ -35,13 +35,6 @@ body{
     overflow: hidden;
     border-radius: 5px;
     box-shadow: -20px -20px rgb(103,186,132), 10px 0px 20px rgba(95, 95, 95, 0.062);
-}
-.info{
-    background-color: white;
-    height: 95%;
-    overflow: auto;
-    padding-left: 10px;
-    border-radius: 5px;
 }
 .btn-nav{
     height: 80px;
@@ -60,5 +53,37 @@ body{
 }
 .links .border-b{
     border-bottom: 1px solid;
-    border-image: linear-gradient(to right, white 0%, var(--letra) 100%) 1;
+    border-image: linear-gradient(to right, white 0%, var(--border) 100%) 1;
+}
+.info{
+    font-weight: 600;
+    background-color: white;
+    height: 95%;
+    overflow: auto;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.info .title{
+    font-size: 1.3em;
+    padding: 25px 35px;
+    color: var(--sec);
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to left, white 0%, var(--border) 100%) 1;
+}
+.info .title span{
+    color: var(--principal);
+}
+.sections{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.section{
+    padding: 25px 35px;
+    color: var(--letra);
+    font-weight: 400;
+    font-size: 1.2em;
+}
+.border-r{
+    border-right: 1px solid;
+    border-image: linear-gradient(to top, white 0%, var(--border) 100%) 1;
 }

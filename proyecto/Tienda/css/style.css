@@ -23,7 +23,7 @@
     padding-right: 70px;
     display: flex;
     flex-direction: row;
-    vertical-align: middle;
+    align-items: center;
 }
 .socials > i{
     margin: 15px 10px;
