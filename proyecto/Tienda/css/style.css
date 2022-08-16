@@ -1,31 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+:root{
+    --principal: rgb(59,187,121);
+}
 *{
     margin: 0;
     padding: 0;
 }
-.footer{
+body{
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600;
+    width: 100vw !important;
+}
+.mi-footer{
     background-color: black;
     color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.float-left{
+.mi-float-left{
     display: flex;
     flex-direction: row;
     vertical-align: middle;
     padding-left: 40px;
 }
-.float-left > div{
+.mi-float-left > div{
     margin: 15px 40px;
-    font-size: 12px;
+    font-size: .6em !important;
 }
-.socials{
+.mi-float-left > div i{
+    padding-right: 12px;
+}
+.mi-socials{
     padding-right: 70px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.socials > i{
+.mi-socials > i{
     margin: 15px 10px;
     font-size: 12px;
+}
+.mi-nav{
+    padding: 20px 70px 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    box-shadow: 10px 0px 7px rgba(95, 95, 95, 0.178);
+}
+.mi-nav .mi-logo{  
+    font-size: 1.3em;
+}
+.mi-nav .mi-links{
+    font-size: 0.8em;
+    list-style: none;
+    display: flex;
+    margin-bottom: 0px;
+}
+.mi-nav .mi-links .mi-link{
+    padding: 8px 10px 0 10px;
+}
+.mi-options{
+    display: flex;
+}
+.mi-options .mi-option{
+    padding: 5px 10px 0px;    
+}
+.mi-options .mi-option i span{
+    font-size: .5em !important;
+    background-color: var(--principal) !important;
+}
+.active{
+    color: var(--principal) !important;
+}
+.mi-breadcrumb .breadcrumb .breadcrumb-item{
+    font-size: .6em !important;
+}
+.accordion h6{
+    font-weight: 600;
+    font-size: .9rem;
+}
+.accordion ul{
+    padding-left: 20px;
+}
+.accordion .accordion-button{
+    padding: .8rem 0 !important;
+    font-size: .8rem !important;
+}
+.accordion-button:not(.collapsed){
+    background-color: white !important;
+    box-shadow: none !important;
+}
+.accordion .accordion-button::after{
+    content: none !important;
+}
+.accordion .accordion-body{
+    padding-left: 0px;
 }

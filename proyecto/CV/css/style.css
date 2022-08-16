@@ -78,7 +78,7 @@ body{
     grid-template-columns: 50% 50%;
 }
 .section{
-    padding: 25px 35px;
+    padding: 25px 55px 25px 35px;
     color: var(--letra);
     font-weight: 400;
     font-size: 1.2em;
@@ -86,4 +86,10 @@ body{
 .border-r{
     border-right: 1px solid;
     border-image: linear-gradient(to top, white 0%, var(--border) 100%) 1;
+}
+.personal-data{
+    float: left;
+}
+.personal-info{
+    float: right;
 }
