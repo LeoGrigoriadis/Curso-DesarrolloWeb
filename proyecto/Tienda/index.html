@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>Mi Tienda</title>
+    <title>RENOSHOP BEE</title>
 </head>
 <body>
     <!-- FOOTER SUPERIOR -->
@@ -54,7 +54,7 @@
     <div class="container py-4">
         <!-- BREADCRUMB -->
         <div class="row justify-content-md-center">
-          <div class="col col-lg-8">
+          <div class="col col-lg-10">
             <div class="mi-breadcrumb py-2">
                 <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -147,12 +147,153 @@
                         </li>
                     </ul>
                 </div>
-                
+                <hr>
+                <div class="mi-filtro-precio">
+                    <h6>PRICE FILTER</h6>
+                    <input type="range">
+                    <div class="mi-buttons">
+                        <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0">$10</button>
+                        <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0">$3000</button>
+                        <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0 btn-active"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <hr style="margin-top: 30px;">
+                    <h6>SIZE</h6>
+                    <div class="mi-size">
+                        <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0">XS</button>
+                        <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0">S</button>
+                        <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0">M</button>
+                        <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0">SL</button>
+                        <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0">L</button>
+                        <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0">XL</button>
+                        <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0">XXL</button>
+                    </div>
+                    <hr>
+                    <h6>COLORS</h6>
+                    <div class="mi-checks">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Black
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                            <label class="form-check-label" for="flexCheckDefault">
+                              White
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Blue
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Yellow
+                            </label>
+                          </div>
+                    </div>
+                </div>
             </div>
             <!-- SECTION -->
-            <div class="col col-lg-6">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti libero, maxime commodi optio fugit dolorum nostrum ea nulla nesciunt ratione beatae nam neque minus vitae suscipit fugiat magnam ipsum nobis?
+            <div class="col col-lg-8">
+                <!-- FILTRO -->
+                <div class="mi-filter">
+                    <div class="mi-results float-start">Showing 1-12 of 44 results</div>
+                    <div class="dropdown float-end">
+                        <button class="btn btn-secondary dropdown-toggle bg-white text-dark border-0 p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Sort by . . .
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Sort by 1</a></li>
+                          <li><a class="dropdown-item" href="#">Sort by 2</a></li>
+                          <li><a class="dropdown-item" href="#">Sort by 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <!-- ELEMENTO 1 -->
+                <div class="card mb-3 mt-5 border-0" style="max-height: 400px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="https://picsum.photos/270/400?random" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body p-4">
+                          <h5 class="card-title">Treatise on the</h5>
+                          <p class="mi-price m-0 mb-1 active">$250.00</p>
+                          <p class="mi-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                          </p>
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, vero. Rem, aut in. Nostrum, soluta illum. Nulla laudantium vel, soluta quisquam, accusamus voluptatem rem esse provident nostrum suscipit molestias. Aspernatur eligendi harum excepturi quia dicta!</p>
+                          <p class="card-text"><small class="text-muted">Shoes, T-Shirt teen</small></p>
+                          <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0"><i class="fa-solid fa-cart-shopping position-relative"></i><span>ADD TO CART</span></button>
+                          <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0"><i class="fa-regular fa-heart"></i></button>
+                          <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0"><i class="fa-solid fa-retweet"></i></button>                          
+                       </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- ELEMENTO 2 -->
+                <div class="card mb-3 mt-5 border-0" style="max-height: 400px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="https://picsum.photos/270/400?random" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body p-4">
+                          <h5 class="card-title">Joust Duffle Bag</h5>
+                          <p class="mi-price m-0 mb-1 active">$250.00</p>
+                          <p class="mi-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </p>
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, vero. Rem, aut in. Nostrum, soluta illum. Nulla laudantium vel, soluta quisquam, accusamus voluptatem rem esse provident nostrum suscipit molestias. Aspernatur eligendi harum excepturi quia dicta!</p>
+                          <p class="card-text"><small class="text-muted">Shoes, T-Shirt teen</small></p>
+                          <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0"><i class="fa-solid fa-cart-shopping position-relative"></i><span>ADD TO CART</span></button>
+                          <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0"><i class="fa-regular fa-heart"></i></button>
+                          <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0"><i class="fa-solid fa-retweet"></i></button>                          
+                       </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- ELEMENTO 3 -->
+                <div class="card mb-3 mt-5 border-0" style="max-height: 400px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="https://picsum.photos/270/400?random" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body p-4">
+                          <h5 class="card-title">Warrior both reach</h5>
+                          <p class="mi-price m-0 mb-1 active">$250.00</p>
+                          <p class="mi-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                          </p>
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, vero. Rem, aut in. Nostrum, soluta illum. Nulla laudantium vel, soluta quisquam, accusamus voluptatem rem esse provident nostrum suscipit molestias. Aspernatur eligendi harum excepturi quia dicta!</p>
+                          <p class="card-text"><small class="text-muted">Shoes, T-Shirt teen</small></p>
+                          <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0"><i class="fa-solid fa-cart-shopping position-relative"></i><span>ADD TO CART</span></button>
+                          <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0"><i class="fa-regular fa-heart"></i></button>
+                          <button type="button" class="btn btn-outline-light text-dark border-secondary rounded-0"><i class="fa-solid fa-retweet"></i></button>                          
+                       </div>
+                      </div>
+                    </div>
+                </div>
             </div>
+            
         </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 :root{
     --principal: rgb(59,187,121);
+    --grey: rgba(95, 95, 95, 0.808);
 }
 *{
     margin: 0;
     padding: 0;
+}
+html{
+    width: 100vw;
+    overflow-x: hidden;
 }
 body{
     font-family: 'Poppins', sans-serif !important;
@@ -78,7 +83,7 @@ body{
 }
 .accordion h6{
     font-weight: 600;
-    font-size: .9rem;
+    font-size: .85rem;
 }
 .accordion ul{
     padding-left: 20px;
@@ -87,9 +92,13 @@ body{
     padding: .8rem 0 !important;
     font-size: .8rem !important;
 }
-.accordion-button:not(.collapsed){
+.accordion li::marker{
+    color: var(--grey);
+}
+.accordion .accordion-button:not(.collapsed){
     background-color: white !important;
     box-shadow: none !important;
+    color: var(--principal) !important;
 }
 .accordion .accordion-button::after{
     content: none !important;
@@ -97,3 +106,165 @@ body{
 .accordion .accordion-body{
     padding-left: 0px;
 }
+hr{
+    width: 100%;
+    color: var(--grey);
+}
+.mi-results,.dropdown .btn, .dropdown-item{
+    color: var(--grey) !important;
+    font-size: .7rem !important;
+    font-weight: 400 !important;
+}
+.dropdown-item{
+    color: black !important;
+}
+.card-body .card-title, .card-body .mi-price{
+    font-size: 1em !important;
+    font-weight: 600 !important;
+}
+.card-body .mi-price, .card-body .text-muted{
+    font-weight: 400 !important;
+}
+.card-body .card-text{
+    font-size: .8rem !important;
+}
+.card-body .btn span{
+    padding-left: 6px;
+}
+.card-body .btn{
+    font-size: .9em;
+    margin-right: 5px;
+}
+.mi-stars i{
+    transform: scale(.8);
+    color: orange;
+}
+.card-body .btn:hover{
+    background-color: var(--principal);
+    color: white !important;
+    border-color: var(--principal) !important;
+}
+.mi-filtro-precio h6{
+    font-weight: 600 !important;
+    font-size: .8em;
+    margin-top: 30px;
+}
+
+/*INPUT RANGE PERSONALIZADO*/
+input[type=range] {
+    height: 23px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;}
+  input[type=range]:focus {
+    outline: none;}
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #000000;
+    border-radius: 0px;
+    border: 0px solid #000000;}
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 1px #000000;
+    border: 2px solid rgba(177, 177, 177, 0.219);
+    height: 15px;
+    width: 15px;
+    border-radius: 0px;
+    background: #000000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6.5px;}
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #000000;}
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #000000;
+    border-radius: 0px;
+    border: 0px solid #000000;}
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 1px #000000;
+    border: 2px solid rgba(177, 177, 177, 0.219);
+    height: 15px;
+    width: 15px;
+    border-radius: 0px;
+    background: #000000;
+    cursor: pointer;}
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;}
+  input[type=range]::-ms-fill-lower {
+    background: #000000;
+    border: 0px solid #000000;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000;}
+  input[type=range]::-ms-fill-upper {
+    background: #000000;
+    border: 0px solid #000000;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000;}
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 1px #000000;
+    border: 2px solid rgba(177, 177, 177, 0.219);
+    height: 15px;
+    width: 15px;
+    border-radius: 0px;
+    background: #000000;
+    cursor: pointer;}
+  input[type=range]:focus::-ms-fill-lower {
+    background: #000000;}
+  input[type=range]:focus::-ms-fill-upper {
+    background: #000000;}
+  /*INPUT RANGE PERSONALIZADO*/
+  
+  .btn-active{    
+    background-color: var(--principal);
+    color: white !important;
+    border-color: var(--principal) !important;
+  }
+  .btn-active:hover{    
+    background-color: white;
+    color: grey !important;
+    border-color: grey !important;
+  }
+
+  .mi-buttons{
+    margin: 8px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .mi-buttons .btn{
+    font-size: .7em;
+    padding: 2px 18px;
+    margin: 2px;
+  }
+  .mi-size{
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mi-size .btn{
+    font-size: .7em;
+    padding: 2px 18px;
+    margin: 2px;
+    width: 55px;
+  }
+
+  .mi-size .btn:hover{    
+    background-color: var(--principal);
+    color: white !important;
+    border-color: var(--principal) !important;
+  }
