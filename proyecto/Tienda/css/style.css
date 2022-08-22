@@ -2,19 +2,17 @@
 :root{
     --principal: rgb(59,187,121);
     --grey: rgba(95, 95, 95, 0.808);
+    --border: 1px solid rgba(179, 179, 179, 0.5);
 }
 *{
     margin: 0;
     padding: 0;
 }
-html{
-    width: 100vw;
-    overflow-x: hidden;
-}
 body{
     font-family: 'Poppins', sans-serif !important;
     font-weight: 600;
     width: 100vw !important;
+    overflow-x: hidden !important;
 }
 .mi-footer{
     background-color: black;
@@ -268,3 +266,84 @@ input[type=range] {
     color: white !important;
     border-color: var(--principal) !important;
   }
+  .mi-checks .form-check-input:checked{
+    background-color: orange;
+    border-color: orange  ;
+  }
+  .mi-checks .form-check{
+    font-size: .7em;
+  }
+  .mi-rated{
+    margin-bottom: 35px;
+  }
+  .mi-rated .rated-item{
+    margin: 20px 0px;
+  }
+  .mi-rated .rated-item .rated-item-content{}
+  .mi-rated .rated-item .rated-item-content .title{
+    font-size: .7em;
+  }
+  .mi-rated .rated-item .rated-item-content .price{
+    width: 100%;
+    font-weight: 400;
+  }
+  .mi-ad .ad-image{
+    margin-top: 35px;
+    width: 100%;
+    height: 200px;
+    background-color: #000000;
+  }
+  .pagination .page-link{
+    font-size: .7em;
+    color: #000;
+    border: none;
+    font-weight: 400;
+  }
+  .pagination .active{
+    background-color: rgba(179, 179, 179, 0.2);
+  }
+  .pagination{
+    margin: 70px 0px;
+    padding: 4px 0px;
+    border-bottom: var(--border);
+  }
+  .pagination, .mi-bottom-footer{
+    border-top: var(--border);
+  }
+  .mi-footer-header .text{
+    font-size: .6em;
+    padding: 20px 0 10px;
+  }
+  .mi-footer-header .socials{
+    padding: 20px 0 10px;
+    border-left: var(--border);
+    border-right: var(--border);
+  }
+  .mi-footer-header .socials i{
+    font-size: .7em;
+  }
+  .footer-content h6{
+    font-weight: 600;
+    font-size: .85rem;
+}
+.footer-content a{
+  font-weight: 400;
+  font-size: .65em;
+  padding-top: 6px;
+  text-decoration: none;
+  color: var(--border);
+}
+.footer-content .fa-solid::before{
+  padding-right: 6px;
+}
+
+.footer-text{
+  font-weight: 400;
+  font-size: .6em;
+}
+.footer-payment a{
+  text-decoration: none;
+}
+.footer-payment .text-secondary .fa-brands::before{
+  width: 20px;
+}
