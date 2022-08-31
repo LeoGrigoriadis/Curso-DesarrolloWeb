@@ -17,39 +17,21 @@ body{
 .mi-footer{
     background-color: black;
     color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.mi-float-left{
-    display: flex;
-    flex-direction: row;
-    vertical-align: middle;
-    padding-left: 40px;
 }
 .mi-float-left > div{
-    margin: 15px 40px;
     font-size: .6em !important;
 }
-.mi-float-left > div i{
-    padding-right: 12px;
-}
 .mi-socials{
-    padding-right: 70px;
-    display: flex;
-    flex-direction: row;
     align-items: center;
 }
 .mi-socials > i{
-    margin: 15px 10px;
-    font-size: 12px;
+    font-size: 8px;
+}
+.box-shadow{
+  box-shadow: 10px 0px 7px rgba(95, 95, 95, 0.178);
 }
 .mi-nav{
     padding: 20px 70px 20px 80px;
-    display: flex;
-    justify-content: space-between;
-    vertical-align: middle;
-    box-shadow: 10px 0px 7px rgba(95, 95, 95, 0.178);
 }
 .mi-nav .mi-logo{  
     font-size: 1.3em;
@@ -62,12 +44,6 @@ body{
 }
 .mi-nav .mi-links .mi-link{
     padding: 8px 10px 0 10px;
-}
-.mi-options{
-    display: flex;
-}
-.mi-options .mi-option{
-    padding: 5px 10px 0px;    
 }
 .mi-options .mi-option i span{
     font-size: .5em !important;
