@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+body{
+    background-color: #dedcdc;
+}
+.content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+}
+.content > div{
+    height: 100%;
+    padding: 15px;
+}
+#char{
+    padding: 5px;
+    width: 20px;
+}
+#palabra, #fallos{
+    font-size: 2em;
+    letter-spacing: 10px;
+    text-align: center;
+}
+.insert, .fails, .center{
+    border: 1px solid #ccc;
+    background-color: white;
+}
+.center{
+    margin: 0 30px;
+    width: 100%;
+}
+input[type="button"]{
+    background-color: rgb(10, 196, 134);
+    border: none;
+    padding: 4px 6px;
+    border-radius: 3px;
+    margin-top: 6px;
+    color: white;
+}

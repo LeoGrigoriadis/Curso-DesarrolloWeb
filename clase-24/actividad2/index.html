@@ -6,31 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Actividad 1</title>
-    <style>
-        .content{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        #char{
-            padding: 5px;
-            width: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="content">
-        <div>
+        <div class="insert">
             <p>Ingrese una letra:</p>
-            <input type="text" id="char" maxlength="1">
-            <input type="submit" onclick="verificar()" value="Verificar">
+            <input type="text" id="char" maxlength="1" required>
+            <input type="button" id="btn" onclick="verificar()" value="Verificar">
         </div>
-        <div>
+        <div class="center">
             <p id="palabra"> </p>
-            <p id="fallos"></p>
+            <p id="error"> </p>
+            <hr color="#ccc">
+            <p id="fallos"> </p>
         </div>
-        <div>
+        <div class="fails">
             <p> <span id="intentos">6</span> intentos</p>
             <input type="button" onclick="reiniciar()" value="Reiniciar">
         </div>
