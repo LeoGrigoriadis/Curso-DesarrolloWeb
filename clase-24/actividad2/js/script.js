@@ -19,12 +19,18 @@ function verificar(){
                 --intentos;
                 fallos.push(letra);
                 document.getElementById("fallos").innerHTML = fallos;
-                if(intentos == 0){ alert("PERDISTE :("); }
+                if(intentos == 0){ 
+                    alert("PERDISTE :(");
+                    document.getElementById("btn").disabled="disabled";
+                }
                 document.getElementById("intentos").innerHTML = intentos;
             }else{
-                nPalabra = nPalabra.reemplazar(pos,letra);
-                palabra = palabra.reemplazar(pos,'-');
-                document.getElementById("palabra").innerHTML = nPalabra;
+                while(pos != -1){
+                    nPalabra = nPalabra.reemplazar(pos,letra);
+                    palabra = palabra.reemplazar(pos,'-');
+                    document.getElementById("palabra").innerHTML = nPalabra;
+                    pos = palabra.indexOf(letra.toLowerCase());
+                }
             }
         }else{
             alert("Letra ya ingresada.");
@@ -39,10 +45,6 @@ function verificar(){
     }
 }
 
-function reiniciar(){
-    intentos = location.reload();
-}
-
 String.prototype.reemplazar = function(index, replacement) {
     if (index >= this.length) {
         return this.valueOf();
@@ -51,4 +53,8 @@ String.prototype.reemplazar = function(index, replacement) {
     var chars = this.split('');
     chars[index] = replacement;
     return chars.join('');
+}
+
+function reiniciar(){
+    location.reload();
 }
