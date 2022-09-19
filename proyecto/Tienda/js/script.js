@@ -32,8 +32,8 @@ function save(id){
         }
     }
 }
-function successFunction(){
-    document.getElementById("text-success").style.setProperty("display", "none", "important");
+function sucessFunction(){
+    document.getElementById("text-success").style.setProperty("display", "none", "important")
 }
 function alertFunction(){
     document.getElementById("text-alert").style.setProperty("display", "none", "important")
