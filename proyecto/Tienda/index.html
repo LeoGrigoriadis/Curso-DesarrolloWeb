@@ -57,7 +57,22 @@
     </div> -->
     <div class="box-shadow">
       <div class="mi-nav container px-0 py-4 d-flex flex-row justify-content-between">
-        a
+        <div class="mi-logo"><span class="active">RENOSHOP</span>BEE </div>
+        <ul class="mi-links d-flex flex-row justify-content-between"> 
+          <li class="mi-link active"><a href="#" class="text-decoration-none active">HOME</a></li>
+          <li class="mi-link"><a href="#" class="text-decoration-none text-dark">WOMEN</a></li>
+          <li class="mi-link"><a href="#" class="text-decoration-none text-dark">MEN</a></li>
+          <li class="mi-link"><a href="#" class="text-decoration-none text-dark">KIDS</a></li>
+          <li class="mi-link"><a href="#" class="text-decoration-none text-dark">JEWELLERY</a></li>
+          <li class="mi-link"><a href="#" class="text-decoration-none text-dark">ACCESSORIES</a></li>
+      </ul>
+      <div class="mi-options d-flex flex-row">
+        <button type="button" class="mi-option border-0 bg-white" data-bs-toggle="modal" data-bs-target="#modal"><i class="fa-solid fa-cart-shopping position-relative">
+            <span id="cart-cont" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                0</i>
+      </button>
+        <i class="fa-solid fa-magnifying-glass ps-3 pt-2"></i>
+      </div>
       </div>
     </div>
     <div class="container py-4">
@@ -79,7 +94,7 @@
         <!-- CONTENEDOR PRINCIPAL -->
         <div class="row justify-content-md-center">
             <!-- ASIDE -->
-            <div class="col col-lg-2">
+            <div class="col col-xl-2">
                 <!-- CATEGORÍAS -->
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <h6>CATEGORIES</h6>
@@ -280,7 +295,7 @@
                       <div class="col-lg-8">
                         <div class="card-body p-4">
                           <h5 id="name1" class="card-title">Treatise on the</h5>
-                          <p id="price1" class="mi-price m-0 mb-1 active">$250.00</p>
+                          <p class="mi-price m-0 mb-1 active">$<span id="price1">550.00</span></p>
                           <p class="mi-stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -306,7 +321,7 @@
                       <div class="col-lg-8">
                         <div class="card-body p-4">
                           <h5 id="name2" class="card-title">Joust Duffle Bag</h5>
-                          <p id="price2" class="mi-price m-0 mb-1 active">$250.00</p>
+                          <p class="mi-price m-0 mb-1 active">$<span  id="price2">640.00</span></p>
                           <p class="mi-stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -332,7 +347,7 @@
                       <div class="col-lg-8">
                         <div class="card-body p-4">
                           <h5 id="name3" class="card-title">Warrior both reach</h5>
-                          <p id="price3" class="mi-price m-0 mb-1 active">$250.00</p>
+                          <p class="mi-price m-0 mb-1 active">$<span  id="price3">185.00</span></p>
                           <p class="mi-stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -358,7 +373,7 @@
                     <div class="col-lg-8">
                       <div class="card-body p-4">
                         <h5 id="name4" class="card-title">Last ex ample</h5>
-                        <p id="price4" class="mi-price m-0 mb-1 active">$250.00</p>
+                        <p class="mi-price m-0 mb-1 active">$<span  id="price4">250.00</span></p>
                         <p class="mi-stars">
                           <i class="fa-solid fa-star"></i>
                           <i class="fa-solid fa-star"></i>
@@ -474,15 +489,36 @@
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Mi carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body px-5" id="modal-body">
+            <!-- elemento 1 - carrito -->
+            
+          </div>
+          <div class="modal-footer d-flex">
+            <p class="me-auto ms-2">Total: <span class="active">$<span id="total">0</span></span></p>
+            <button type="button" class="btn" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-active" data-bs-target="#confirm-modal" data-bs-toggle="modal" data-bs-dismiss="modal" onclick="finishBuy()">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="confirm-modal" aria-hidden="true" aria-labelledby="confirm-title" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirm-title">
+              
+            </h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            Contenido
+            <p class="card-text" id="card-text">
+          </p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary">Comprar</button>
+            <button class="btn btn-active" onclick="reload()" data-bs-dismiss="modal" aria-label="Close">Volver a la tienda</button>
           </div>
         </div>
       </div>

@@ -323,3 +323,17 @@ input[type=range] {
 .footer-payment .text-secondary .fa-brands::before{
   width: 20px;
 }
+.fa-trash{
+  cursor: pointer;
+  color: rgb(209, 76, 76);
+  transform:scale(1.4);
+  transition-duration: .2s;
+}
+
+.fa-trash:hover{
+  transform:scale(1.2);
+}
+
+.danger{
+  color: rgb(248, 195, 80);
+}
