@@ -4,10 +4,10 @@ function addCategory(){
     let sel = document.getElementById("sel").value;
     // alert(sel);
     categoryAnswer(sel).then((data) => {
-        let answers = data.res;
+        let answers = data.results;
         answers.forEach(element => {
             var opt = document.createElement("p");
-            opt.innerHTML = "";
+            opt.innerHTML = element.question;
             resultAnswer.appendChild(opt);
         });
     });
