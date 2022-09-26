@@ -50,35 +50,43 @@ function cart(){
     let html = "";
     if(products != null){
         if(products.length > 0){
-            products.forEach(element => {
-                total += parseInt(element.product.price);
-            html += `
-            <div id="element`+element.product.id+`" class="card mb-3 border-light bg-light">
-                <div class="row g-0">
-                    <div class="col-3">
-                    <img src="`+element.product.image+`" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-9">
-                    <div class="card-body row px-4" style="height: 100%">
-                        <h3 class="col-9 fw-bold">`+element.product.name+`</h3>
-                        <a class="col-3 text-end"><i onclick="del(`+element.product.id+`)" class="fa-solid fa-trash"></i></a>
-                        <p class="card-text">`+element.product.desc+`</p>
-                        <div class="d-flex justify-content-between align-self-end" style="width:100%">
-                        <div class="d-inline col-6 text-start text-muted" style="font-size: 12px;">Producto #<span>`+element.product.id+`</span></div>
-                        <div class="d-inline col-6 text-end active">
-                          <div class=" d-inline text-secondary pe-2">
-                            <i class="fa-solid fa-minus text-dark" style="cursor:pointer" onclick="rest(`+element.product.id+`)"></i>
-                          </div> $`+element.product.price+`
-                          <div class=" d-inline text-secondary">
-                            x <div class="d-inline"> `+element.product.count+` </div> <i class="fa-solid fa-plus text-dark ps-2" style="cursor:pointer" onclick="sum(`+element.product.id+`)"></i>
-                          </div>
+            products.forEach(element => {    
+                let styleDisabledRest = ` " style="cursor:pointer"`;
+                let styleDisabledSum = ` " style="cursor:pointer"`;
+                total += (parseInt(element.product.price)*parseInt(element.product.count));
+                if (element.product.count <= 1){
+                    styleDisabledRest = ` btn-disabled" style="cursor:auto;"`;
+                } 
+                else if(element.product.count >= 10){
+                    styleDisabledSum = ` btn-disabled" style="cursor:auto;"`;
+                }
+                html += `
+                <div id="element`+element.product.id+`" class="card mb-3 border-light bg-light">
+                    <div class="row g-0">
+                        <div class="col-3">
+                        <img src="`+element.product.image+`" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-9">
+                        <div class="card-body row px-4" style="height: 100%">
+                            <h3 class="col-9 fw-bold">`+element.product.name+`</h3>
+                            <a class="col-3 text-end"><i onclick="del(`+element.product.id+`)" class="fa-solid fa-trash"></i></a>
+                            <p class="card-text">`+element.product.desc+`</p>
+                            <div class="d-flex justify-content-between align-self-end" style="width:100%">
+                            <div class="d-inline col-6 text-start text-muted" style="font-size: 12px;">Producto #<span>`+element.product.id+`</span></div>
+                            <div class="d-inline col-6 text-end active">
+                            <div class=" d-inline text-secondary pe-2">
+                                <i class="fa-solid fa-minus text-dark`+styleDisabledRest+` onclick="count(`+element.product.id+`, false)"></i>
+                            </div> $`+element.product.price+`
+                            <div class=" d-inline text-secondary">
+                                x <div class="d-inline"> `+element.product.count+` </div> <i class="fa-solid fa-plus text-dark ps-2`+styleDisabledSum+` onclick="count(`+element.product.id+`, true)"></i>
+                            </div>
+                            </div>
+                            </div>
                         </div>
                         </div>
                     </div>
-                    </div>
                 </div>
-                </div>
-            `;
+                `;
             });
             
         } else {
@@ -130,25 +138,24 @@ function reload(){
     location.reload();
 }
 
-function rest(id){
-    alert("-"+id);
+function count(id, flag){
     var products = JSON.parse(localStorage.getItem("products"));
-    var counts = products.find((element) => element.product.id === id);
+    var element = products.find((element) => element.product.id === id);
     var indexFind = products.findIndex((element) => element.product.id === id);
-}
-
-function sum(id){
-    alert("+"+id);
-    var products = JSON.parse(localStorage.getItem("products"));
-    var counts = products.find((element) => element.product.id === id);
-    var indexFind = products.findIndex((element) => element.product.id === id);
-    if(counts == undefined){
+    if(element == undefined){
         alert("Error!");
     }else{
-        // products.splice(indexFind,1);
-        // localStorage.setItem("products", JSON.stringify(products));
-        // document.getElementById("cart-cont").innerHTML = --cartCont;
-        // localStorage.setItem("cartCont", cartCont);
-        // this.cart();
+        if(flag){
+            if(element.product.count<10){
+                element.product.count++;             
+            }
+        } else {
+            if(element.product.count>1){
+                element.product.count--;                 
+            }
+        }
+        products.splice(indexFind,1,element);
+        localStorage.setItem("products", JSON.stringify(products));
+        this.cart();
     }
 }
